@@ -1,0 +1,70 @@
+#container {
+	margin: 0 auto;
+	width: 801px;
+	height: 401px;
+	box-shadow: 0 0 30px #830707 inset;
+}
+
+.pixel {
+	background-color: #C4C4C4;
+	float: left;
+}
+
+.drawn {
+	background-color: #7A7A7A;
+}
+
+/* Styling */
+
+.button {
+	border-radius: 100%;
+	width: 120px;
+	height: 120px;
+	margin-top: 12px;
+	box-shadow: 8px 8px 5px #830707;
+	font-family: 'Poiret One', cursive;
+	font-size: 22px;
+	color: #7F767E;
+}
+
+
+
+#clear {
+	float: left;
+	margin-left: 100px;
+}
+
+#noPixels {
+	float: right;
+	margin-right: 100px;
+}
+
+#name {
+	font-family: 'Pacifico', cursive;
+	color: #FFB700;
+	text-align: center;
+	font-size: 3em;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#etchASketch {
+	background-color: #c30f2a;
+	width: 1000px;
+	height: 630px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30px;
+	-webkit-box-shadow: 0 0 25px #830707 inset;
+	box-shadow: 0 0 25px #830707 inset;
+}
