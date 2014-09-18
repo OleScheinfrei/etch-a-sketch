@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var numberOfPixelsColumn = 16;
 	
 
-	// function to create a grid.
+	// function to create a grid with x * x/2 pixels.
 	function grid (){
 		var numberOfPixels = numberOfPixelsColumn * (numberOfPixelsColumn/2);
 
@@ -12,28 +12,28 @@ $(document).ready(function(){
 			$("#container").append("<div class='pixel'></div>");
 		};
 
-		var widthPixel = 800 / numberOfPixelsColumn;					// width of container divided by number of pixels
+		var widthPixel = 800 / numberOfPixelsColumn;				// width of container divided by number of pixels
 		$(".pixel").css({"width":widthPixel,"height":widthPixel});	// change CSS of width and height
 	};
 
-	// function to draw. 
+	// function to draw only when mouse is pressed and moved around. 
 	function draw (){
-		var isDown = false;							//Is mouse down? 
+		var isDown = false;							//Is mouse pressed? 
 
 		$(document).mousedown(function(){
-			isDown = true;							//If mouse is pressed, set "isDown = true;" 
+			isDown = true;							//When mouse is pressed, set "isDown = true;" 
 		})
 
-		.mouseup(function(){						//If mouse is not pressed, set "isDown = false;"
+		.mouseup(function(){						//When mouse is not pressed, set "isDown = false;"
 			isDown = false;
 		});
 
 
-		$(".pixel").mousedown(function(){			//If mouse is pressed for a single time (and released), draw a pixel.
+		$(".pixel").mousedown(function(){			//When mouse is pressed for a single time (and released), change the class (and therefore draw a pixel).
 			$(this).addClass("drawn");	
 		});
 
-		$(".pixel").mouseover(function(){			//If mouse is pressed and moved around, change the class (and therefore draw).
+		$(".pixel").mouseover(function(){			//When mouse is pressed and moved around, change the class (and therefore draw).
 			if(isDown){
 				$(this).addClass("drawn");	
 			}
@@ -63,7 +63,7 @@ $(document).ready(function(){
 		draw();	
 	});
 
-	// Only clear drawing without changing number of pixels.
+	// Clear drawing without changing number of pixels.
 	$("#clear").click(function(){
 		$(".pixel").removeClass("drawn");
 	});
