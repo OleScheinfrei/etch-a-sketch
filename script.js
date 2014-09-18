@@ -44,7 +44,7 @@ $(document).ready(function(){
 	grid();
 	draw();
 
-	// Create a new grid if you click on button "clear". 
+	// Create a new grid if you click on button "No. of pixels". 
 	$("#noPixels").click(function (){					
 
 		numberOfPixelsColumn = prompt("How many pixels per row? Please choose an even number smaller than 100!");
